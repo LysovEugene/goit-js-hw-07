@@ -1,14 +1,10 @@
-// Write code under this line
-const getUserNames = users => users.map(({ name }) => name);
+const categories = document.querySelector('#categories');
+console.log(`TASK_1`, `В списке ${categories.children.length} категории.`);
 
-console.log(getUserNames(users));
-
-/* [
-  "Moore Hensley",
-  "Sharlene Bush",
-  "Ross Vazquez",
-  "Elma Head",
-  "Carey Barr",
-  "Blackburn Dotson",
-  "Sheree Anthony",
-] */
+const item = document.querySelectorAll('.item');
+item.forEach(el =>
+  console.log(
+    `Категория: ${el.firstElementChild.textContent}.`,
+    `Количество элементов: ${el.lastElementChild.children.length}.`,
+  ),
+);
