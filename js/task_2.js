@@ -6,19 +6,13 @@ const ingredients = [
   'Зелень',
   'Приправы',
 ];
-// посилання на батьківський елемент, "список Інгридієнтів"
-const ingredientsEl = document.querySelector('#ingredients');
 
-// перебираємо масив інгридієнтів
-const newArrayEl = ingredients.map(item => {
-  // створюємо елемент
-  const newElement = document.createElement('li');
-  // додаємо текст елементу
-  newElement.textContent = item;
+const elementUl = document.querySelector('#ingredients');
 
-  return newElement;
+const ingredientsItems = ingredients.map(ingredient => {
+  const elementLi = document.createElement('li');
+  elementLi.textContent = ingredient;
+  return elementLi;
 });
 
-// додає нові елементи
-ingredientsEl.prepend(...newArrayEl);
-console.log(newElement);
+elementUl.append(...ingredientsItems);
