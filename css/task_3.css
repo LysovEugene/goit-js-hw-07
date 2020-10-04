@@ -1,0 +1,17 @@
+#gallery {
+  display: flex;
+  flex-direction: row;
+  justify-content: sacebetween;
+  flex-direction: row-reverse;
+}
+
+.gallery_item {
+  list-style: none;
+  width: 100px;
+  height: auto;
+}
+
+.gallery_item-image {
+  width: 100px;
+  height: auto;
+}
