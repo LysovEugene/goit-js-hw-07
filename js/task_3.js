@@ -16,14 +16,10 @@ const images = [
   },
 ];
 
-const imagew = images
-  .map(
-    image =>
-      `<li class = "gallery_item"><img class = "gallery_item-image" src = "${image.url}" alt = "${image.alt}"/></li>`,
-  )
-  .join('');
-// console.log(imagew);
-
-const gallery = document.querySelector('#gallery');
-
-gallery.insertAdjacentHTML('beforebegin', imagew);
+const ulGallery = document.querySelector('#gallery');
+const imageItem = options => {
+  const { url, alt } = options;
+  return `<li><img src="${url}"alt="${alt}"><li>`;
+};
+const imageItems = images.map(imageItem).join('');
+ulGallery.insertAdjacentHTML('beforeend', imageItems);

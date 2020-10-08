@@ -1,17 +1,16 @@
 #gallery {
   display: flex;
   flex-direction: row;
-  justify-content: sacebetween;
-  flex-direction: row-reverse;
+  justify-content: flex-start;
 }
 
-.gallery_item {
+ul {
   list-style: none;
-  width: 100px;
-  height: auto;
 }
 
-.gallery_item-image {
-  width: 100px;
+img {
+  width: 200px;
+  margin: 15px;
   height: auto;
+  padding: 0;
 }
